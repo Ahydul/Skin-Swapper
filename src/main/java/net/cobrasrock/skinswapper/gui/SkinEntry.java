@@ -114,15 +114,16 @@ public class SkinEntry extends AlwaysSelectedEntryListWidget.Entry<SkinEntry>
      */
     public SkinType genSkinType() {
         try{
-            BufferedImage image = ImageIO.read(skin_file);
-            int pixel = image.getRGB(50,19);
+            // BufferedImage image = ImageIO.read(skin_file);
+            // int pixel = image.getRGB(50,19);
 
-            if((pixel>>24) == 0x00)
-            {
-                return SkinType.SLIM;
-            }
+            // if((pixel>>24) == 0x00)
+            // {
+            //     return SkinType.SLIM;
+            // }
 
-            return SkinType.CLASSIC;
+            // return SkinType.CLASSIC;
+            return SkinType.SLIM;
         }catch(Exception e){
             return null;
         }
