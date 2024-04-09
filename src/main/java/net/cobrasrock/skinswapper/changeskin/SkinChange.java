@@ -51,7 +51,8 @@ public class SkinChange {
             HttpPost http = new HttpPost("https://api.minecraftservices.com/minecraft/profile/skins");
 
             MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-            builder.addTextBody("variant", skinType.getName(), ContentType.TEXT_PLAIN);
+            String skintype = skinType.equals(SkinType.CLASSIC) ? "classic" : skinType.getName();
+            builder.addTextBody("variant", skintype, ContentType.TEXT_PLAIN);
             builder.addBinaryBody(
                     "file",
                     new FileInputStream(fname),

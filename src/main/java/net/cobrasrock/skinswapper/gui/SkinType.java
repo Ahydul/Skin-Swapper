@@ -1,7 +1,7 @@
 package net.cobrasrock.skinswapper.gui;
 
 public enum SkinType {
-    CLASSIC("classic"),
+    CLASSIC("default"),
     SLIM("slim");
 
     private final String name;
