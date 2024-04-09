@@ -6,6 +6,7 @@ import net.cobrasrock.skinswapper.Compatibility;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.InventoryScreen;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.texture.NativeImage;
@@ -44,7 +45,7 @@ public class SkinUtils {
      * Creates a dummy player.
      * @return A dummy player
      */
-    public static LivingEntity getDummyPlayer() throws Exception{
+    public static AbstractClientPlayerEntity getDummyPlayer() throws Exception{
         if(MinecraftClient.getInstance().player != null && SkinSwapperConfig.showArmor) return MinecraftClient.getInstance().player;
 
         if(player == null){
